@@ -4,10 +4,19 @@
 
 <h1>The audio loop attribute</h1>
 
-<audio controls loop autoplay>
+<audio id="mysound" controls autoplay loop>
   <source src="src/sound/unpactoinstrumental.mp3" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
+
+<script>
+        window.onload = function () {
+            setTimeout(function () {
+                var x = document.getElementById("mysound");
+                if (x) x.play();
+            }, 1000); // Delay of 5 seconds
+        };
+</script>
 
 </body>
 </html>
